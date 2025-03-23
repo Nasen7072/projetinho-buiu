@@ -22,7 +22,9 @@ function increaseFontSize() {
 function decreaseFontSize() {
     const body = document.body;
     let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-    body.style.fontSize = (currentSize - 2) + 'px';
+    if (currentSize > 12) { // Evita que a fonte fique muito pequena
+        body.style.fontSize = (currentSize - 2) + 'px';
+    }
 }
 
 // Função para melhorar o foco visível
@@ -40,9 +42,13 @@ function improveFocusVisible() {
 
 // Função para ler o conteúdo da página em voz alta
 function readPageContent() {
-    const content = document.body.innerText;
-    const utterance = new SpeechSynthesisUtterance(content);
-    window.speechSynthesis.speak(utterance);
+    if ('speechSynthesis' in window) {
+        const content = document.body.innerText;
+        const utterance = new SpeechSynthesisUtterance(content);
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert("Seu navegador não suporta a funcionalidade de leitura em voz alta.");
+    }
 }
 
 // Verifica se o usuário já habilitou o alto contraste anteriormente
