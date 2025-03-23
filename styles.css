@@ -1,44 +1,126 @@
-/* Botões de Acessibilidade */
-.accessibility-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+/* Estilos gerais */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
 }
 
-.accessibility-buttons button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+body, html {
+  height: 100%;
+  line-height: 1.8;
 }
 
-.accessibility-buttons button:hover {
-    background-color: #555;
+/* Imagem de fundo do cabeçalho */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://apparelbyenemy.com/cdn/shop/articles/wp8431376.jpg?v=1684366903"); /* Imagem de um carro JDM */
+  min-height: 100%;
+}
+
+/* Estilo da barra de navegação */
+.w3-bar .w3-button {
+  padding: 16px;
 }
 
 /* Tema de alto contraste */
 .high-contrast {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .high-contrast a {
-    color: #ff0;
+  color: #ff0;
 }
 
 .high-contrast button {
-    background-color: #ff0;
-    color: #000;
-    border: 2px solid #fff;
+  background-color: #ff0;
+  color: #000;
+  border: 2px solid #fff;
 }
 
 .high-contrast input,
 .high-contrast textarea,
 .high-contrast select {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Estilo para botões de acessibilidade */
+.accessibility-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.accessibility-buttons button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.accessibility-buttons button:hover {
+  background-color: #555;
+}
+
+/* Estilo para a galeria de imagens */
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+
+/* Estilo para o formulário de contato */
+.w3-container.w3-light-grey {
+  padding: 128px 16px;
+}
+
+.w3-container.w3-light-grey h3 {
+  text-align: center;
+}
+
+.w3-container.w3-light-grey p {
+  text-align: center;
+}
+
+.w3-container.w3-light-grey form {
+  margin-top: 48px;
+}
+
+.w3-container.w3-light-grey input,
+.w3-container.w3-light-grey textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+}
+
+.w3-container.w3-light-grey button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.w3-container.w3-light-grey button:hover {
+  background-color: #555;
+}
+
+/* Estilo para o rodapé */
+footer {
+  text-align: center;
+  padding: 64px;
+  background-color: #000;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff0;
 }
