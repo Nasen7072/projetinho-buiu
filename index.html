@@ -17,6 +17,7 @@
             line-height: 1.8;
         }
 
+        /* Imagem de fundo do cabeçalho */
         .bgimg-1 {
             background-position: center;
             background-size: cover;
@@ -24,6 +25,7 @@
             min-height: 100%;
         }
 
+        /* Estilo da barra de navegação */
         .w3-bar .w3-button {
             padding: 16px;
         }
@@ -71,6 +73,68 @@
 
         .accessibility-buttons button:hover {
             background-color: #555;
+        }
+
+        /* Estilo para a galeria de imagens */
+        .w3-row-padding img {
+            width: 100%;
+            height: 200px; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            margin-bottom: 12px;
+        }
+
+        /* Estilo para o formulário de contato */
+        .w3-container.w3-light-grey {
+            padding: 128px 16px;
+        }
+
+        .w3-container.w3-light-grey h3 {
+            text-align: center;
+        }
+
+        .w3-container.w3-light-grey p {
+            text-align: center;
+        }
+
+        .w3-container.w3-light-grey form {
+            margin-top: 48px;
+        }
+
+        .w3-container.w3-light-grey input,
+        .w3-container.w3-light-grey textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .w3-container.w3-light-grey button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+        }
+
+        .w3-container.w3-light-grey button:hover {
+            background-color: #555;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            text-align: center;
+            padding: 64px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff0;
         }
     </style>
 </head>
@@ -164,7 +228,7 @@
         <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://www.japancardirect.com/wp-content/uploads/2016/04/t1.jpg" alt="Toyota AE86">
+                    <img src="https://www.japancardirect.com/wp-content/uploads/2016/04/t1.jpg" alt="Toyota AE86" style="width:100%">
                     <div class="w3-container">
                         <h3>Toyota AE86</h3>
                         <p class="w3-opacity">O lendário "Hachi-Roku"</p>
@@ -174,7 +238,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWdyX2vdhk6LNYqLPstPcar-L3_cxTAiVY1g&s" alt="Nissan Skyline GT-R">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWdyX2vdhk6LNYqLPstPcar-L3_cxTAiVY1g&s" alt="Nissan Skyline GT-R" style="width:100%">
                     <div class="w3-container">
                         <h3>Nissan Skyline GT-R</h3>
                         <p class="w3-opacity">O "Godzilla"</p>
@@ -184,7 +248,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLN1VlYyUEVlOQHFPqx2nmblMlc7B4QH6H22S_C1AItbv976_r9pR-YzbhXJawKtiipt4&usqp=CAU" alt="Mazda RX-7">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLN1VlYyUEVlOQHFPqx2nmblMlc7B4QH6H22S_C1AItbv976_r9pR-YzbhXJawKtiipt4&usqp=CAU" alt="Mazda RX-7" style="width:100%">
                     <div class="w3-container">
                         <h3>Mazda RX-7</h3>
                         <p class="w3-opacity">Rotativo e ágil</p>
@@ -194,7 +258,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://i.pinimg.com/736x/c6/ae/77/c6ae770eabeb398273c1a66b1f918e84.jpg" alt="Honda NSX">
+                    <img src="https://i.pinimg.com/736x/c6/ae/77/c6ae770eabeb398273c1a66b1f918e84.jpg" alt="Honda NSX" style="width:100%">
                     <div class="w3-container">
                         <h3>Honda NSX</h3>
                         <p class="w3-opacity">O supercarro japonês</p>
@@ -211,16 +275,16 @@
         <p class="w3-center w3-large">Algumas imagens dos nossos carros favoritos</p>
         <div class="w3-row-padding" style="margin-top:64px">
             <div class="w3-col l3 m6">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdRotooE7xgivLvdzY33-RkwWjHHZLgP-sw&s" alt="Toyota Supra MK4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdRotooE7xgivLvdzY33-RkwWjHHZLgP-sw&s" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Toyota Supra MK4">
             </div>
             <div class="w3-col l3 m6">
-                <img src="https://i.pinimg.com/originals/6d/55/68/6d5568e129cf5707c008076841c131fa.jpg" alt="Nissan 240SX">
+                <img src="https://i.pinimg.com/originals/6d/55/68/6d5568e129cf5707c008076841c131fa.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Nissan 240SX">
             </div>
             <div class="w3-col l3 m6">
-                <img src="https://i.pinimg.com/564x/9c/9b/6a/9c9b6a24b277c0182b31fe6e55f849cd.jpg" alt="Mazda MX-5">
+                <img src="https://i.pinimg.com/564x/9c/9b/6a/9c9b6a24b277c0182b31fe6e55f849cd.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mazda MX-5">
             </div>
             <div class="w3-col l3 m6">
-                <img src="https://i.pinimg.com/736x/ac/a6/b7/aca6b7fb55ea0e811d2ab96225ae303a.jpg" alt="Subaru Impreza WRX">
+                <img src="https://i.pinimg.com/736x/ac/a6/b7/aca6b7fb55ea0e811d2ab96225ae303a.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Subaru Impreza WRX">
             </div>
         </div>
     </div>
@@ -252,42 +316,4 @@
     <footer class="w3-center w3-black w3-padding-64">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a>
         <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-        <p>Instagram <a href="https://www.instagram.com/kaka.vtr.nk7?igsh=dDkweDE4NHRsaTRz" title="criadores" target="_blank" class="w3-hover-text-green">criadores</a></p>
-        <p>Instagram <a href="https://www.instagram.com/gab.hso?igsh=MWV5YWZ0YmtwanU2dg==" title="criadores" target="_blank" class="w3-hover-text-green">criadores</a></p>
-    </footer>
-
-    <!-- Script de Acessibilidade -->
-    <script>
-        // Função para alternar o tema de alto contraste
-        function toggleHighContrast() {
-            const body = document.body;
-            body.classList.toggle("high-contrast");
-
-            // Salva a preferência do usuário no localStorage
-            if (body.classList.contains("high-contrast")) {
-                localStorage.setItem("highContrast", "enabled");
-            } else {
-                localStorage.setItem("highContrast", "disabled");
-            }
-        }
-
-        // Função para aumentar o tamanho da fonte
-        function increaseFontSize() {
-            const body = document.body;
-            let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-            body.style.fontSize = (currentSize + 2) + 'px';
-        }
-
-        // Função para diminuir o tamanho da fonte
-        function decreaseFontSize() {
-            const body = document.body;
-            let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-            if (currentSize > 12) { // Evita que a fonte fique muito pequena
-                body.style.fontSize
+            <i class="fa
