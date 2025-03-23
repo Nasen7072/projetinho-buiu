@@ -27,19 +27,6 @@ function decreaseFontSize() {
     }
 }
 
-// Função para melhorar o foco visível
-function improveFocusVisible() {
-    const focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]');
-    focusableElements.forEach(element => {
-        element.addEventListener('focus', () => {
-            element.style.outline = '3px solid #ff0000';
-        });
-        element.addEventListener('blur', () => {
-            element.style.outline = '';
-        });
-    });
-}
-
 // Função para ler o conteúdo da página em voz alta
 function readPageContent() {
     if ('speechSynthesis' in window) {
@@ -58,40 +45,9 @@ function checkHighContrastPreference() {
     }
 }
 
-// Adiciona botões de acessibilidade ao DOM
-function addAccessibilityButtons() {
-    const accessibilityDiv = document.createElement('div');
-    accessibilityDiv.className = 'accessibility-buttons';
-
-    const highContrastButton = document.createElement('button');
-    highContrastButton.innerText = 'Alto Contraste';
-    highContrastButton.onclick = toggleHighContrast;
-
-    const increaseFontButton = document.createElement('button');
-    increaseFontButton.innerText = 'A+';
-    increaseFontButton.onclick = increaseFontSize;
-
-    const decreaseFontButton = document.createElement('button');
-    decreaseFontButton.innerText = 'A-';
-    decreaseFontButton.onclick = decreaseFontSize;
-
-    const readContentButton = document.createElement('button');
-    readContentButton.innerText = 'Ler Conteúdo';
-    readContentButton.onclick = readPageContent;
-
-    accessibilityDiv.appendChild(highContrastButton);
-    accessibilityDiv.appendChild(increaseFontButton);
-    accessibilityDiv.appendChild(decreaseFontButton);
-    accessibilityDiv.appendChild(readContentButton);
-
-    document.body.appendChild(accessibilityDiv);
-}
-
 // Inicializa as funcionalidades de acessibilidade
 function initAccessibility() {
     checkHighContrastPreference();
-    addAccessibilityButtons();
-    improveFocusVisible();
 }
 
 // Executa a inicialização quando o DOM estiver pronto
