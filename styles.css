@@ -1,23 +1,19 @@
-/* Tema de alto contraste */
-.high-contrast {
-    background-color: #000;
+.accessibility-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.accessibility-buttons button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #333;
     color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-.high-contrast a {
-    color: #ff0;
-}
-
-.high-contrast button {
-    background-color: #ff0;
-    color: #000;
-    border: 2px solid #fff;
-}
-
-.high-contrast input,
-.high-contrast textarea,
-.high-contrast select {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #fff;
+.accessibility-buttons button:hover {
+    background-color: #555;
 }
