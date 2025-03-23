@@ -72,19 +72,6 @@
         .accessibility-buttons button:hover {
             background-color: #555;
         }
-
-        /* Ajuste para todas as imagens terem o mesmo tamanho */
-        .w3-card img {
-            width: 100%;
-            height: 200px; /* Altura fixa para todas as imagens */
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-        }
-
-        .w3-row-padding img {
-            width: 100%;
-            height: 200px; /* Altura fixa para as imagens da galeria */
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-        }
     </style>
 </head>
 <body>
@@ -292,4 +279,14 @@
         }
 
         // Função para aumentar o tamanho da fonte
-        function increaseFontSize() {
+        function increaseFontSize() {
+            const body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+            body.style.fontSize = (currentSize + 2) + 'px';
+        }
+
+        // Função para diminuir o tamanho da fonte
+        function decreaseFontSize() {
+            const body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+            if (currentSize > 12) { // Evita
