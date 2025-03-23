@@ -55,10 +55,7 @@ function checkHighContrastPreference() {
 // Adiciona botões de acessibilidade ao DOM
 function addAccessibilityButtons() {
     const accessibilityDiv = document.createElement('div');
-    accessibilityDiv.style.position = 'fixed';
-    accessibilityDiv.style.bottom = '20px';
-    accessibilityDiv.style.right = '20px';
-    accessibilityDiv.style.zIndex = '1000';
+    accessibilityDiv.className = 'accessibility-buttons';
 
     const highContrastButton = document.createElement('button');
     highContrastButton.innerText = 'Alto Contraste';
