@@ -1,3 +1,4 @@
+/* Botões de Acessibilidade */
 .accessibility-buttons {
     position: fixed;
     bottom: 20px;
@@ -16,4 +17,28 @@
 
 .accessibility-buttons button:hover {
     background-color: #555;
+}
+
+/* Tema de alto contraste */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #ff0;
+}
+
+.high-contrast button {
+    background-color: #ff0;
+    color: #000;
+    border: 2px solid #fff;
+}
+
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
 }
