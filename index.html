@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
     <title>Classícos JDM</title>
     <meta charset="UTF-8">
@@ -142,10 +142,10 @@
 
     <!-- Botões de Acessibilidade -->
     <div class="accessibility-buttons">
-        <button onclick="toggleHighContrast()" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
-        <button onclick="increaseFontSize()" aria-label="Aumentar tamanho da fonte">A+</button>
-        <button onclick="decreaseFontSize()" aria-label="Diminuir tamanho da fonte">A-</button>
-        <button onclick="readPageContent()" aria-label="Ler conteúdo da página">Ler Conteúdo</button>
+        <button onclick="toggleHighContrast()">Alto Contraste</button>
+        <button onclick="increaseFontSize()">A+</button>
+        <button onclick="decreaseFontSize()">A-</button>
+        <button onclick="readPageContent()">Ler Conteúdo</button>
     </div>
 
     <!-- Navbar (sit on top) -->
@@ -160,7 +160,7 @@
                 <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()" aria-label="Abrir menu">
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
@@ -168,7 +168,7 @@
 
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" aria-label="Fechar menu">Fechar ×</a>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Fechar ×</a>
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
         <a href="#models" onclick="w3_close()" class="w3-bar-item w3-button">MODELOS</a>
         <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button">GALERIA</a>
@@ -184,12 +184,12 @@
             <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Saiba mais</a></p>
         </div>
         <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-            <a href="#" aria-label="Facebook"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href="#" aria-label="Snapchat"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
     </header>
 
@@ -248,4 +248,72 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLN1VlYyUEVlOQHFPqx2nmblMlc7B4QH6H22
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLN1VlYyUEVlOQHFPqx2nmblMlc7B4QH6H22S_C1AItbv976_r9pR-YzbhXJawKtiipt4&usqp=CAU" alt="Mazda RX-7" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Mazda RX-7</h3>
+                        <p class="w3-opacity">Rotativo e ágil</p>
+                        <p>Famoso por seu motor rotativo Wankel e design aerodinâmico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="https://i.pinimg.com/736x/c6/ae/77/c6ae770eabeb398273c1a66b1f918e84.jpg" alt="Honda NSX" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Honda NSX</h3>
+                        <p class="w3-opacity">O supercarro japonês</p>
+                        <p>Desenvolvido com a ajuda de Ayrton Senna, é um ícone da engenharia Honda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="w3-container" style="padding:128px 16px" id="gallery">
+        <h3 class="w3-center">GALERIA</h3>
+        <p class="w3-center w3-large">Algumas imagens dos nossos carros favoritos</p>
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-col l3 m6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdRotooE7xgivLvdzY33-RkwWjHHZLgP-sw&s" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Toyota Supra MK4">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="https://i.pinimg.com/originals/6d/55/68/6d5568e129cf5707c008076841c131fa.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Nissan 240SX">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="https://i.pinimg.com/564x/9c/9b/6a/9c9b6a24b277c0182b31fe6e55f849cd.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mazda MX-5">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="https://i.pinimg.com/736x/ac/a6/b7/aca6b7fb55ea0e811d2ab96225ae303a.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Subaru Impreza WRX">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+        <h3 class="w3-center">CONTATO</h3>
+        <p class="w3-center w3-large">Entre em contato conosco</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> São Paulo, BR</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone: +55 11 99999-9999</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contato@jdmclassics.com</p>
+            <br>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message"></p>
+                <p>
+                    <button class="w3-button w3-black" type="submit">
+                        <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao topo</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa
